@@ -1,5 +1,8 @@
 # webapp-monitor
-Monitor a webapp and notify admin if down. This is a simple project that illustrates how a webapp's health can be monitored.
+Monitor a webapp and notify admin if down.
+
+## Introduction
+This is a simple project that illustrates how a webapp's health can be monitored.
 
 ## This uses the following:
 - Flask for a simple webapp

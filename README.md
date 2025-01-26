@@ -45,7 +45,7 @@ docker exec -it webapp-monitor-web-1 /bin/sh
 and kill the Flask process:
 Check the PID by:
 ```
-pd
+ps
 ```
 Then execute:
 ```

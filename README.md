@@ -27,6 +27,10 @@ git clone https://github.com/ajongski/webapp-monitor.git
 ```
 - Inside the local copy of the repo, create a copy of the **`smtp_email_credentials`** and rename it to **`.env`**
 - Provide the necessary credentials for the SMTP email in the .env file
+- Add execute permission to ./scripts/healthcheck.sh:
+```
+chmod +x ./scripts/healthcheck.sh
+```  
 - Assuming Docker and Docker is available on your machine, run in the terminal the following command:
 ```
 docker compose up

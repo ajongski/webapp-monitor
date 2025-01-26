@@ -21,5 +21,5 @@ do
     else
         python /scripts/smtp.py
     fi
-    sleep 10
+    sleep 60
 done

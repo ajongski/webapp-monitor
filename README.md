@@ -25,7 +25,7 @@ Monitor a webapp and notify admin if down. This is a simple project that illustr
 ```
 git clone https://github.com/ajongski/webapp-monitor.git
 ```
-- Inside the local copy of the repo, create a copy of the smtp_email_credentials and rename it to .env
+- Inside the local copy of the repo, create a copy of the **`smtp_email_credentials`** and rename it to **`.env`**
 - Provide the necessary credentials for the SMTP email in the .env file
 - Assuming Docker and Docker is available on your machine, run in the termin the following command:
 ```

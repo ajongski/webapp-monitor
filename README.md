@@ -40,21 +40,26 @@ docker compose up -d
 ## Simulate downtime
 - In the terminal, go inside the webapp container
 ```
-docker exec -it webapp-monitoring-1 /bin/sh
+docker exec -it webapp-monitor-web-1 /bin/sh
 ```
 and kill the Flask process:
+Check the PID by:
 ```
-service flask kill
+pd
+```
+Then execute:
+```
+kill -15 [PID of Flask]
 ```
 - Wait for a minute or so for the email notification about the health status
 
 ## Troubleshooting
-- In case there are changes made to any of the files in the local repo, delete first the containers and images created by the running the **`docker compose`** command
+- In case there are changes made to any of the files in the local repo, compose down and delete images created:
 It should look like this:
 ```
-docker compose rm webapp-monitoring-1
+docker compose down
 ```
 and
 ```
-docker rmi [image ID of the webapp]
+docker rmi [image ID of the images created]
 ```

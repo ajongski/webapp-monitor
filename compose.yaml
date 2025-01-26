@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+  healthchecker:
+    image: python:3.13.1
+    environment:
+      HOST_ENV: ${HOST}
+      PORT_ENV: ${PORT}
+      FROM_EMAIL_ENV: ${FROM_EMAIL}
+      TO_EMAIL_ENV: ${TO_EMAIL}
+      PASSWORD_ENV: ${PASSWORD}
+    env_file:
+      - .env
+    volumes:
+      - ./scripts:/scripts
+    command: ["bash", "chmod +x /scripts/healthcheck.sh && sleep 10"]
+    entrypoint: /scripts/healthcheck.sh
